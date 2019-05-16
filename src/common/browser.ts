@@ -5,13 +5,14 @@ class Browser {
   options: object = {
     headless: false,
     ignoreHTTPSErrors: true,
+    defaultViewport: null,
     args: [
-      // '--ignore-certificate-errors',
+      '--ignore-certificate-errors',
       '--no-sandbox',
-      // '--disable-xss-auditor',
-      // '--disable-setuid-sandbox',
-      // '--disable-notifications',
-      // '--allow-running-insecure-content',
+      '--disable-xss-auditor',
+      '--disable-setuid-sandbox',
+      '--disable-notifications',
+      '--allow-running-insecure-content',
     ],
   };
   public async init(args?: object) {
@@ -22,7 +23,7 @@ class Browser {
   public async newPage() {
     await this.init({});
     const page = await this.browser.newPage();
-    await page.goto('https://www.youtube.com/user/NoCopyrightSounds/playlists');
+    return page;
   }
   public async close() {
     await this.browser.close();
