@@ -23,7 +23,7 @@
     "@nestcloud/schedule": "^0.3.7",
     "@nestjs/common": "^6.2.0",
     "@nestjs/core": "^6.2.0",
-    "@nestjs/platform-express": "^6.2.0",
+    "@nestjs/platform-express": "^9.2.1",
     "puppeteer": "^1.16.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^2.6.3",
